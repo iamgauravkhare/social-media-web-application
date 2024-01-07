@@ -1,13 +1,11 @@
-import axios from "axios";
+import axios from "../utilities/axios";
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 
 const App = () => {
   useEffect(() => {
     const serverConnectionCheck = async () => {
-      const response = await axios.get(
-        "https://instagram-clone-server-jvn7.onrender.com/api/v1/authentication/server-connection"
-      );
+      const response = await axios.get("/authentication/server-connection");
       if (response.data.success === true) {
         toast("Server Connection Successfull");
         console.log(response.data.message);
