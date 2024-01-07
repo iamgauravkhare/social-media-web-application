@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+  filter: drop-shadow(0px 0px 80px rgb(255, 0, 136));
+}
