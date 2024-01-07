@@ -6,7 +6,7 @@ const App = () => {
   useEffect(() => {
     const serverConnectionCheck = async () => {
       const response = await axios.get(
-        "http://localhost:4500/api/v1/authentication/server-connection"
+        "https://instagram-clone-server-jvn7.onrender.com/api/v1/authentication/server-connection"
       );
       if (response.data.success === true) {
         toast("Server Connection Successfull");
