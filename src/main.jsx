@@ -3,10 +3,16 @@ import ReactDOM from "react-dom/client";
 import { Toaster } from "react-hot-toast";
 import App from "./App.jsx";
 import "./index.css";
-
+import store from "../store/store.js";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-    <Toaster />
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+        <Toaster />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );

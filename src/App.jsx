@@ -1,11 +1,18 @@
 import axios from "../utilities/axios";
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";
+import { apiConnector } from "./services/apiConnector";
+import { endpoints } from "./services/apis";
+const { SERVER_CONNECTION_CHECK } = endpoints;
 
 const App = () => {
+  const BASE_URL_2 = import.meta.env.VITE_API_BASE_URL;
+  const BASE_URL = "http://localhost:4500/api/v1";
+
+  console.log(BASE_URL_2);
   useEffect(() => {
     const serverConnectionCheck = async () => {
-      const response = await axios.get("/authentication/server-connection");
+      const response = await apiConnector("GET", SERVER_CONNECTION_CHECK);
       if (response.data.success === true) {
         toast("Server Connection Successfull");
         console.log(response.data.message);
