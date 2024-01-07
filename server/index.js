@@ -9,7 +9,7 @@ const MongoStore = require("connect-mongo");
 const fileUpload = require("express-fileupload");
 require("dotenv").config();
 
-const CustomErrorGenerateHandler = require("./utilities/CustomErrorGenerateHandler");
+const CustomErrorGenerateHandler = require("./utilities/customErrorGenerateHandler");
 const { errorHandler } = require("./middlewares/errorHandler");
 const { databaseConnection } = require("./configuration/database");
 const { cloudinaryConnection } = require("./configuration/cloudinary");
