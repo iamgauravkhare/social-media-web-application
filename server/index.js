@@ -17,7 +17,13 @@ const { cloudinaryConnection } = require("./configuration/cloudinary");
 const authenticationRoutes = require("./routes/authentication");
 
 const PORT = process.env.PORT || 4000;
-const allowedOrigins = ["http://localhost:3000", "http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://instagram-clone-nu-three.vercel.app",
+  "https://instagram-clone-iamgauravkhare.vercel.app",
+  "https://instagram-clone-git-master-iamgauravkhare.vercel.app",
+  "https://instagram-clone-3q8q9e6m4-iamgauravkhare.vercel.app",
+];
 
 databaseConnection();
 cloudinaryConnection();
